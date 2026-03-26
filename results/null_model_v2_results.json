@@ -1,0 +1,43 @@
+{
+  "n_subjects": 50,
+  "n_epochs_wn3": 99479,
+  "n_wake": 93400,
+  "n_n3": 6079,
+  "real": {
+    "auc_I": 0.9013957623623011,
+    "id_correlation": -0.9844610687348003
+  },
+  "null_1_label_permutation": {
+    "n_permutations": 1000,
+    "perm_auc_mean": 0.4998049270419843,
+    "perm_auc_std": 0.0037534082207081924,
+    "p_value": 0.0,
+    "significant": true
+  },
+  "null_2_cross_band": {
+    "aucs": [
+      0.9013957623623011,
+      0.9013957623623011,
+      0.9013957623623011,
+      0.9013957623623011,
+      0.9013957623623011
+    ],
+    "mean_auc": 0.901395762362301,
+    "delta": 1.1102230246251565e-16,
+    "band_matters": false
+  },
+  "null_3_phase_randomization": {
+    "aucs": [
+      0.8655878453326703,
+      0.8646046892221722,
+      0.8646986677553539,
+      0.8655548271808766,
+      0.866064842880658
+    ],
+    "mean_auc": 0.8653021744743462,
+    "delta": 0.036093587887954914,
+    "temporal_matters": true
+  },
+  "id_correlation_explanation": "Mathematical: R and D are complementary functions of the spectral power distribution. Anticorrelation is structural, not neural.",
+  "verdict": "CLASSIFICATION REAL, PARTIALLY TEMPORAL"
+}

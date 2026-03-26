@@ -1,0 +1,35 @@
+# Backups
+*.bak
+*.draft.md
+det-chaos-*-backup.tex
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets & credentials
+*.env
+*.key
+*.token
+
+# Data too large for git (download from PhysioNet)
+*.edf
+*.rec
+
+# Build artifacts
+*.pdf
+*.log
+*.ipynb
+
+# Intermediate plots (publication figures are in figures/)
+results/*.png
+
+# Internal working files
+archive/
+.claude/
+provisional-patent-draft.md

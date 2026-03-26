@@ -1,0 +1,194 @@
+{
+  "financial": {
+    "RS_AUC": {
+      "value": 0.7688,
+      "ci_lo": 0.7438,
+      "ci_hi": 0.7938
+    },
+    "RS_AUPRC": {
+      "value": 0.1289,
+      "ci_lo": 0.1074,
+      "ci_hi": 0.1598
+    },
+    "Sum_AUC": {
+      "value": 0.8682,
+      "ci_lo": 0.8473,
+      "ci_hi": 0.8878
+    },
+    "Sum_AUPRC": {
+      "value": 0.2892,
+      "ci_lo": 0.2416,
+      "ci_hi": 0.3462
+    },
+    "ablation": [
+      {
+        "layer": "L0",
+        "auc": 0.7423,
+        "ci_lo": 0.7165,
+        "ci_hi": 0.7673,
+        "delta": -0.0266
+      },
+      {
+        "layer": "L1",
+        "auc": 0.6899,
+        "ci_lo": 0.661,
+        "ci_hi": 0.719,
+        "delta": -0.0789
+      },
+      {
+        "layer": "L2",
+        "auc": 0.7116,
+        "ci_lo": 0.6818,
+        "ci_hi": 0.7417,
+        "delta": -0.0572
+      },
+      {
+        "layer": "L3",
+        "auc": 0.6757,
+        "ci_lo": 0.6451,
+        "ci_hi": 0.7069,
+        "delta": -0.0931
+      },
+      {
+        "layer": "L4",
+        "auc": 0.7784,
+        "ci_lo": 0.7559,
+        "ci_hi": 0.8004,
+        "delta": 0.0096
+      }
+    ],
+    "theta_sweep": [
+      {
+        "theta": 1.5,
+        "auc": 0.7686,
+        "auprc": 0.1296,
+        "pos_gate": 100.0,
+        "neg_gate": 95.9
+      },
+      {
+        "theta": 2.0,
+        "auc": 0.7688,
+        "auprc": 0.1289,
+        "pos_gate": 93.2,
+        "neg_gate": 54.3
+      },
+      {
+        "theta": 2.5,
+        "auc": 0.7476,
+        "auprc": 0.1254,
+        "pos_gate": 81.9,
+        "neg_gate": 42.7
+      },
+      {
+        "theta": 3.0,
+        "auc": 0.6929,
+        "auprc": 0.1106,
+        "pos_gate": 53.2,
+        "neg_gate": 15.9
+      },
+      {
+        "theta": 3.5,
+        "auc": 0.6219,
+        "auprc": 0.0888,
+        "pos_gate": 31.1,
+        "neg_gate": 6.8
+      }
+    ]
+  },
+  "space": {
+    "RS_AUC": {
+      "value": 0.8352,
+      "ci_lo": 0.7885,
+      "ci_hi": 0.8762
+    },
+    "RS_AUPRC": {
+      "value": 0.0215,
+      "ci_lo": 0.0139,
+      "ci_hi": 0.0381
+    },
+    "Sum_AUC": {
+      "value": 0.9322,
+      "ci_lo": 0.8951,
+      "ci_hi": 0.9618
+    },
+    "Sum_AUPRC": {
+      "value": 0.1996,
+      "ci_lo": 0.1153,
+      "ci_hi": 0.334
+    },
+    "ablation": [
+      {
+        "layer": "L0",
+        "auc": 0.7969,
+        "ci_lo": 0.7412,
+        "ci_hi": 0.8507,
+        "delta": -0.0384
+      },
+      {
+        "layer": "L1",
+        "auc": 0.8444,
+        "ci_lo": 0.801,
+        "ci_hi": 0.8818,
+        "delta": 0.0091
+      },
+      {
+        "layer": "L2",
+        "auc": 0.7711,
+        "ci_lo": 0.705,
+        "ci_hi": 0.8371,
+        "delta": -0.0641
+      },
+      {
+        "layer": "L3",
+        "auc": 0.7434,
+        "ci_lo": 0.677,
+        "ci_hi": 0.8116,
+        "delta": -0.0918
+      },
+      {
+        "layer": "L4",
+        "auc": 0.7893,
+        "ci_lo": 0.7258,
+        "ci_hi": 0.8474,
+        "delta": -0.046
+      }
+    ],
+    "theta_sweep": [
+      {
+        "theta": 1.5,
+        "auc": 0.8369,
+        "auprc": 0.0216,
+        "pos_gate": 96.1,
+        "neg_gate": 50.5
+      },
+      {
+        "theta": 2.0,
+        "auc": 0.8352,
+        "auprc": 0.0215,
+        "pos_gate": 94.1,
+        "neg_gate": 36.9
+      },
+      {
+        "theta": 2.5,
+        "auc": 0.824,
+        "auprc": 0.0211,
+        "pos_gate": 90.2,
+        "neg_gate": 31.3
+      },
+      {
+        "theta": 3.0,
+        "auc": 0.7477,
+        "auprc": 0.0184,
+        "pos_gate": 66.7,
+        "neg_gate": 18.6
+      },
+      {
+        "theta": 3.5,
+        "auc": 0.6929,
+        "auprc": 0.0161,
+        "pos_gate": 51.0,
+        "neg_gate": 12.9
+      }
+    ]
+  }
+}

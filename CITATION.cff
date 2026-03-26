@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Dynamic Existence Threshold (DET)"
+authors:
+  - family-names: Thornhill
+    given-names: Nathan M.
+    orcid: "https://orcid.org/0009-0009-3161-528X"
+version: "1.0.0"
+date-released: "2026-03-27"
+url: "https://github.com/existencethreshold/dynamic-existence-threshold"
+preferred-citation:
+  type: article
+  title: "The Dynamic Existence Threshold: Organizational Consciousness across Complex Systems"
+  authors:
+    - family-names: Thornhill
+      given-names: Nathan M.
+      orcid: "https://orcid.org/0009-0009-3161-528X"
+  year: 2026
+  journal: "Submitted to Chaos (AIP)"
+  doi: "10.5281/zenodo.18373411"

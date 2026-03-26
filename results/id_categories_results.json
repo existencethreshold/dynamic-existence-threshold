@@ -1,0 +1,170 @@
+{
+  "financial": {
+    "R*S": {
+      "CASCADE  (dI>0, dD<0)": {
+        "event_pct": 0.4505,
+        "normal_pct": 0.3352,
+        "gap": 0.1153,
+        "event_rate_in_category": 0.0572,
+        "n_days_in_category": 2308
+      },
+      "COINCIDE (dI>0, dD>0)": {
+        "event_pct": 0.0137,
+        "normal_pct": 0.0063,
+        "gap": 0.0073,
+        "event_rate_in_category": 0.0889,
+        "n_days_in_category": 45
+      },
+      "DISSOLVE (dI<0, dD>0)": {
+        "event_pct": 0.4881,
+        "normal_pct": 0.3493,
+        "gap": 0.1388,
+        "event_rate_in_category": 0.0593,
+        "n_days_in_category": 2410
+      },
+      "COLLAPSE (dI<0, dD<0)": {
+        "event_pct": 0.0171,
+        "normal_pct": 0.0069,
+        "gap": 0.0101,
+        "event_rate_in_category": 0.1,
+        "n_days_in_category": 50
+      },
+      "BALANCE  (|dI|\u2248|dD|)": {
+        "event_pct": 0.6758,
+        "normal_pct": 0.7908,
+        "gap": -0.115,
+        "event_rate_in_category": 0.0371,
+        "n_days_in_category": 5331
+      },
+      "cascade_detector": {
+        "precision": 0.0572,
+        "recall": 0.4505
+      }
+    },
+    "Sum": {
+      "CASCADE  (dI>0, dD<0)": {
+        "event_pct": 0.3584,
+        "normal_pct": 0.3309,
+        "gap": 0.0274,
+        "event_rate_in_category": 0.0466,
+        "n_days_in_category": 2253
+      },
+      "COINCIDE (dI>0, dD>0)": {
+        "event_pct": 0.1195,
+        "normal_pct": 0.1328,
+        "gap": -0.0133,
+        "event_rate_in_category": 0.039,
+        "n_days_in_category": 897
+      },
+      "DISSOLVE (dI<0, dD>0)": {
+        "event_pct": 0.3959,
+        "normal_pct": 0.3758,
+        "gap": 0.0202,
+        "event_rate_in_category": 0.0454,
+        "n_days_in_category": 2555
+      },
+      "COLLAPSE (dI<0, dD<0)": {
+        "event_pct": 0.1263,
+        "normal_pct": 0.1553,
+        "gap": -0.029,
+        "event_rate_in_category": 0.0354,
+        "n_days_in_category": 1045
+      },
+      "BALANCE  (|dI|\u2248|dD|)": {
+        "event_pct": 0.2628,
+        "normal_pct": 0.4266,
+        "gap": -0.1638,
+        "event_rate_in_category": 0.0271,
+        "n_days_in_category": 2846
+      },
+      "cascade_detector": {
+        "precision": 0.0466,
+        "recall": 0.3584
+      }
+    }
+  },
+  "space": {
+    "R*S": {
+      "CASCADE  (dI>0, dD<0)": {
+        "event_pct": 0.5098,
+        "normal_pct": 0.2152,
+        "gap": 0.2946,
+        "event_rate_in_category": 0.0122,
+        "n_days_in_category": 2124
+      },
+      "COINCIDE (dI>0, dD>0)": {
+        "event_pct": 0.0196,
+        "normal_pct": 0.0286,
+        "gap": -0.009,
+        "event_rate_in_category": 0.0036,
+        "n_days_in_category": 280
+      },
+      "DISSOLVE (dI<0, dD>0)": {
+        "event_pct": 0.4314,
+        "normal_pct": 0.2467,
+        "gap": 0.1847,
+        "event_rate_in_category": 0.0091,
+        "n_days_in_category": 2427
+      },
+      "COLLAPSE (dI<0, dD<0)": {
+        "event_pct": 0.0,
+        "normal_pct": 0.0238,
+        "gap": -0.0238,
+        "event_rate_in_category": 0.0,
+        "n_days_in_category": 232
+      },
+      "BALANCE  (|dI|\u2248|dD|)": {
+        "event_pct": 0.1765,
+        "normal_pct": 0.449,
+        "gap": -0.2726,
+        "event_rate_in_category": 0.0021,
+        "n_days_in_category": 4387
+      },
+      "cascade_detector": {
+        "precision": 0.0122,
+        "recall": 0.5098
+      }
+    },
+    "Sum": {
+      "CASCADE  (dI>0, dD<0)": {
+        "event_pct": 0.3725,
+        "normal_pct": 0.2273,
+        "gap": 0.1453,
+        "event_rate_in_category": 0.0085,
+        "n_days_in_category": 2235
+      },
+      "COINCIDE (dI>0, dD>0)": {
+        "event_pct": 0.098,
+        "normal_pct": 0.1414,
+        "gap": -0.0434,
+        "event_rate_in_category": 0.0036,
+        "n_days_in_category": 1384
+      },
+      "DISSOLVE (dI<0, dD>0)": {
+        "event_pct": 0.3529,
+        "normal_pct": 0.2749,
+        "gap": 0.0781,
+        "event_rate_in_category": 0.0067,
+        "n_days_in_category": 2698
+      },
+      "COLLAPSE (dI<0, dD<0)": {
+        "event_pct": 0.1373,
+        "normal_pct": 0.1511,
+        "gap": -0.0138,
+        "event_rate_in_category": 0.0047,
+        "n_days_in_category": 1480
+      },
+      "BALANCE  (|dI|\u2248|dD|)": {
+        "event_pct": 0.098,
+        "normal_pct": 0.4651,
+        "gap": -0.3671,
+        "event_rate_in_category": 0.0011,
+        "n_days_in_category": 4540
+      },
+      "cascade_detector": {
+        "precision": 0.0085,
+        "recall": 0.3725
+      }
+    }
+  }
+}
