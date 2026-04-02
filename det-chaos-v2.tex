@@ -1,5 +1,6 @@
-\documentclass[aip,cha,reprint,amsmath,amssymb]{revtex4-2}
+\documentclass[aip,cha,preprint,amsmath,amssymb]{revtex4-2}
 \usepackage{graphicx}
+\graphicspath{{figures/}{./}}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xurl}
@@ -49,7 +50,7 @@ The four states represent a theoretical taxonomy of the $I$--$D$ plane. Because 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig1_quadrant_model.png}
+\includegraphics[width=\columnwidth]{fig1_quadrant_model.png}
 \caption{\label{fig:quadrant}Schematic of the $I$--$D$ phase space showing the four theoretical states (Table~I) and the entropy-coupled axis along which empirical observations are constrained. Healthy baseline function occupies the center of this axis; critical events correspond to departures toward the CASCADE or DORMANT extremes.}
 \end{figure}
 
@@ -217,7 +218,7 @@ Space & $\pm 1.5\sigma$ & 3 & 2 & 0.01 \\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig5_residence.png}
+\includegraphics[width=\columnwidth]{fig5_residence.png}
 \caption{\label{fig:residence}Balance zone residence time distributions for event vs.\ normal periods. Events exit the balance zone faster than normal state changes, with median residence times halved during event periods in financial markets ($p = 0.0001$).}
 \end{figure}
 
@@ -235,7 +236,7 @@ The convergence of the 2.0$\times$ elevation ratio across two physically unrelat
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig2_early_warning.png}
+\includegraphics[width=\columnwidth]{fig2_early_warning.png}
 \caption{\label{fig:early_warning}Rolling variance of the balance metric $B = |z(I) - z(D)|$ showing pre-event elevation. The 30-day rolling variance rises to 2.0$\times$ its normal-period level at a 5-day lead before events in both financial and space weather domains, consistent with critical slowing down.}
 \end{figure}
 
@@ -251,7 +252,7 @@ A comparison of classifier performance across metrics and domains is shown in Fi
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig3_classifier_comparison.png}
+\includegraphics[width=\columnwidth]{fig3_classifier_comparison.png}
 \caption{\label{fig:classifier}Classifier comparison across metrics (Sum, $R \times S$, exit velocity) and domains (financial markets, space weather). Sum provides a strong baseline in time-series domains but anti-predicts in EEG, while exit velocity and $R \times S$ capture structural organization.}
 \end{figure}
 
@@ -308,7 +309,7 @@ The distribution of $I$ ($R \times S$) for Wake vs.\ N3 is shown in Fig.~\ref{fi
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig4_eeg_stages.png}
+\includegraphics[width=\columnwidth]{fig4_eeg_stages.png}
 \caption{\label{fig:eeg_stages}Distribution of $I$ ($R \times S$) for Wake vs.\ N3 deep sleep across 50 subjects (57,212 epochs). The coupling metric cleanly separates states (AUC 0.909), while Sum anti-predicts (AUC 0.416) because N3 has higher total spectral power than wakefulness.}
 \end{figure}
 
@@ -422,7 +423,7 @@ The layer sensitivity results are shown in Fig.~\ref{fig:layer_sensitivity}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig6_layer_sensitivity.png}
+\includegraphics[width=\columnwidth]{fig6_layer_sensitivity.png}
 \caption{\label{fig:layer_sensitivity}AUC stability across layer counts $N = 3$ to $N = 8$ for all three domains. The framework is robust to layer count, with performance degrading smoothly only at $N = 3$ (insufficient hierarchical depth). Sum continues to anti-predict in EEG at all layer counts.}
 \end{figure}
 
