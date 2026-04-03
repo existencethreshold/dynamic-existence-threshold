@@ -33,3 +33,11 @@ results/*.png
 archive/
 .claude/
 provisional-patent-draft.md
+
+# LaTeX build artifacts
+*.aux
+*.out
+*.bbl
+*.blg
+*Notes.bib
+*.synctex.gz
