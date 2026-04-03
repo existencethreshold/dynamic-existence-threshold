@@ -295,7 +295,7 @@ def fig4_eeg_stages():
         # Add ratio annotations
         for i, (w, n) in enumerate(zip(wake_pcts, n3_pcts)):
             if n > 0:
-                ax.text(i, max(w, n) + 3, f'{w/n:.0f}×', ha='center', fontsize=10, fontweight='bold', color='darkgreen')
+                ax.text(i, max(w, n) + 3, f'{w/n:.1f}×', ha='center', fontsize=10, fontweight='bold', color='darkgreen')
             else:
                 ax.text(i, w + 3, '∞', ha='center', fontsize=12, fontweight='bold', color='darkgreen')
     
