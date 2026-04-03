@@ -1,4 +1,4 @@
-\documentclass[aip,cha,reprint,onecolumn,amsmath,amssymb,final]{revtex4-2}
+\documentclass[aip,cha,preprint,amsmath,amssymb,final,tightenlines]{revtex4-2}
 \usepackage{graphicx}
 \graphicspath{{figures/}{./}}
 \usepackage{booktabs}
@@ -49,11 +49,11 @@ The four states represent a theoretical taxonomy of the $I$--$D$ plane. Because 
 
 \emph{Note:} Empirically, healthy baseline function (wakefulness, normal markets) corresponds to moderate values of both $I$ and $D$---the center of the entropy axis---not to any single quadrant corner. The Dormant/fragmented and Cascade quadrants represent the two extremes of this axis, with healthy function between them.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig1_quadrant_model.png}
+\includegraphics[width=\columnwidth]{fig1_quadrant_model.png}
 \caption{\label{fig:quadrant}Schematic of the $I$--$D$ phase space showing the four theoretical states (Table~I) and the entropy-coupled axis along which empirical observations are constrained. Healthy baseline function occupies the center of this axis; critical events correspond to departures toward the CASCADE or DORMANT extremes.}
-\end{figure*}
+\end{figure}
 
 The Dynamic Existence Threshold (DET) is the boundary of the balance zone in $I$--$D$ space. Systems persist within this zone; critical events correspond to exits from it. We use ``existence'' in the information-theoretic sense: a system \emph{exists as an organized entity} when its integrated information is positive. When $I$--$D$ balance breaks, the system persists physically but its organizational identity---the coordinated structure that distinguishes it from its components---degrades. A market in cascade is still a market in name; it is not functioning as one. A brain in deep sleep still generates electrical activity; it has lost the cross-frequency coordination that characterizes conscious processing. The threshold is not physical death but organizational dissolution---the loss of what we term \emph{multi-scale coordination}, the property of a complex system whose components are simultaneously integrated and differentiated. Crucially, the approach to this boundary should produce early warning signals---rising variance in the balance metric---consistent with the critical slowing down framework~\cite{scheffer2009}.
 
@@ -217,11 +217,11 @@ Space & $\pm 1.5\sigma$ & 3 & 2 & 0.01 \\
 \end{tabular}
 \end{table}
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig5_residence.png}
+\includegraphics[width=\columnwidth]{fig5_residence.png}
 \caption{\label{fig:residence}Balance zone residence time distributions for event vs.\ normal periods. Events exit the balance zone faster than normal state changes, with median residence times halved during event periods in financial markets ($p = 0.0001$).}
-\end{figure*}
+\end{figure}
 
 The discrimination improves at wider thresholds, consistent with the interpretation that larger balance zones capture more of the normal-state dynamics while still showing rapid event-period exits.
 
@@ -235,11 +235,11 @@ The third and most practically significant prediction is that rising variance of
 
 The convergence of the 2.0$\times$ elevation ratio across two physically unrelated domains at the 5-day horizon---without any parameter tuning---is notable (Fig.~\ref{fig:early_warning}). The $I$--$D$ balance metric appears to provide a common coordinate system in which the approach to critical transitions manifests with quantitatively similar early warning signatures.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig2_early_warning.png}
+\includegraphics[width=\columnwidth]{fig2_early_warning.png}
 \caption{\label{fig:early_warning}Rolling variance of the balance metric $B = |z(I) - z(D)|$ showing pre-event elevation. The 30-day rolling variance rises to 2.0$\times$ its normal-period level at a 5-day lead before events in both financial and space weather domains, consistent with critical slowing down.}
-\end{figure*}
+\end{figure}
 
 \subsection{Test 4: Classifier Performance, Exit Velocity, and Cross-Domain Transfer}
 
@@ -251,11 +251,11 @@ The convergence of the 2.0$\times$ elevation ratio across two physically unrelat
 
 A comparison of classifier performance across metrics and domains is shown in Fig.~\ref{fig:classifier}.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig3_classifier_comparison.png}
+\includegraphics[width=\columnwidth]{fig3_classifier_comparison.png}
 \caption{\label{fig:classifier}Classifier comparison across metrics (Sum, $R \times S$, exit velocity) and domains (financial markets, space weather). Sum provides a strong baseline in time-series domains but anti-predicts in EEG, while exit velocity and $R \times S$ capture structural organization.}
-\end{figure*}
+\end{figure}
 
 \textbf{Cross-domain transfer.} To test whether the framework captures domain-general structure, classification thresholds learned in one domain were applied to the other without recalibration. The Sum-based threshold ratio between domains is 1.47$\times$, and financial-to-space transfer achieves a true positive rate (TPR) of 0.78---reasonable cross-domain performance for a zero-tuning framework. The $R \times S$ threshold ratio is larger (3.77$\times$), reflecting the greater domain-specificity of coupling structure compared to total magnitude. For cross-domain transfer, Sum provides a more stable $I$ coordinate than $R \times S$.
 
@@ -308,11 +308,11 @@ Exit velocity ratio & 4.2$\times$ & 5.6$\times$ & \textbf{4.9$\times$} \\
 
 The distribution of $I$ ($R \times S$) for Wake vs.\ N3 is shown in Fig.~\ref{fig:eeg_stages}, illustrating the anti-prediction of Sum and the clean separation achieved by the coupling metric.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig4_eeg_stages.png}
+\includegraphics[width=\columnwidth]{fig4_eeg_stages.png}
 \caption{\label{fig:eeg_stages}Distribution of $I$ ($R \times S$) for Wake vs.\ N3 deep sleep across 50 subjects (57,212 epochs). The coupling metric cleanly separates states (AUC 0.909), while Sum anti-predicts (AUC 0.416) because N3 has higher total spectral power than wakefulness.}
-\end{figure*}
+\end{figure}
 
 \subsection{\label{sec:robustness}Robustness Across Thresholds}
 
@@ -422,11 +422,11 @@ Critically, the Sum metric continues to anti-predict in EEG at all layer counts 
 
 The layer sensitivity results are shown in Fig.~\ref{fig:layer_sensitivity}.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{fig6_layer_sensitivity.png}
+\includegraphics[width=\columnwidth]{fig6_layer_sensitivity.png}
 \caption{\label{fig:layer_sensitivity}AUC stability across layer counts $N = 3$ to $N = 8$ for all three domains. The framework is robust to layer count, with performance degrading smoothly only at $N = 3$ (insufficient hierarchical depth). Sum continues to anti-predict in EEG at all layer counts.}
-\end{figure*}
+\end{figure}
 
 The EEG result at $N = 6$ (AUC 0.924) suggests that splitting delta into slow and fast sub-bands captures additional structure relevant to coherence-state discrimination, consistent with the known physiological distinction between delta-1 (0.5--2~Hz) and delta-2 (2--4~Hz) oscillations~\cite{amzica1998}. However, we retain the five-layer architecture as the standard to maintain the zero-tuning claim---selecting $N = 6$ specifically for EEG would constitute domain-specific optimization.
 
