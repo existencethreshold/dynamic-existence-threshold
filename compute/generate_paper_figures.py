@@ -114,10 +114,10 @@ def fig1_quadrant_model():
                      label='I-D Balance Zone')
     ax.plot(x, x, '--', color='goldenrod', linewidth=1.5, alpha=0.7)
     
-    # Arrow: cascade exit
-    ax.annotate('', xy=(0.85, 0.2), xytext=(0.6, 0.6),
+    # Arrow: cascade exit (shifted right to avoid overlapping CASCADE label)
+    ax.annotate('', xy=(0.92, 0.15), xytext=(0.65, 0.6),
                 arrowprops=dict(arrowstyle='->', color='red', lw=2))
-    ax.text(0.80, 0.45, 'Event\nExit', fontsize=10, color='red', ha='center', fontweight='bold')
+    ax.text(0.88, 0.42, 'Event\nExit', fontsize=10, color='red', ha='center', fontweight='bold')
     
     ax.set_xlabel('Integration (I = R × S)', fontsize=13)
     ax.set_ylabel('Differentiation (D)', fontsize=13)
@@ -295,7 +295,7 @@ def fig4_eeg_stages():
         # Add ratio annotations
         for i, (w, n) in enumerate(zip(wake_pcts, n3_pcts)):
             if n > 0:
-                ax.text(i, max(w, n) + 3, f'{w/n:.1f}×', ha='center', fontsize=10, fontweight='bold', color='darkgreen')
+                ax.text(i, max(w, n) + 3, f'{w/n:.0f}×', ha='center', fontsize=10, fontweight='bold', color='darkgreen')
             else:
                 ax.text(i, w + 3, '∞', ha='center', fontsize=12, fontweight='bold', color='darkgreen')
     
