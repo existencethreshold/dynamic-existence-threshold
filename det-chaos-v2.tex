@@ -32,7 +32,7 @@ The present work synthesizes these threads. IIT's $\Phi$ remains intractable for
 
 The central hypothesis is straightforward. Integration ($I$) measures the degree of coordinated coupling among system components. Differentiation ($D$) measures the degree to which the system's activity profile diverges from uniformity. These two quantities define a phase space with four canonical states (Fig.~\ref{fig:quadrant}):
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{Four-state model of the $I$--$D$ phase space.}
 \begin{ruledtabular}
 \begin{tabular}{llll}
@@ -43,7 +43,7 @@ Cascade/seizure/crash & High & Low & Pathological synchronization \\
 Death/off & Low & Low & System inactive \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 The four states represent a theoretical taxonomy of the $I$--$D$ plane. Because the chosen proxy metrics are entropy-coupled (Section~3.6.4), empirical observations are largely constrained to the CASCADE--RECOVERY axis (high-$I$/low-$D$ to low-$I$/high-$D$). The Organized complexity and Death/off quadrants would require entropy-decoupled metrics---such as network-topology measures or formal partial information decomposition---to access reliably. The taxonomy remains useful as a conceptual map even when the accessible region is a subset of the full plane.
 
@@ -66,7 +66,7 @@ This paper tests five predictions derived from the DET hypothesis across three d
 
 To enable cross-domain comparison without parameter tuning, each domain is decomposed into five measurement layers representing distinct scales or modalities of system activity. The five-layer decomposition follows a principle of hierarchical coverage: layers span from the most local or fundamental process ($L_0$) to the most global or emergent indicator ($L_4$). Table~\ref{tab:layers} specifies the mapping.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:layers}Five-layer architecture across domains.}
 \begin{ruledtabular}
 \begin{tabular}{llll}
@@ -78,7 +78,7 @@ $L_3$ & Beta (13--30 Hz) & Planetary K-index (Kp) & VIX implied volatility \\
 $L_4$ & Gamma (30--45 Hz) & Auroral Electrojet (AE) index & Flight-to-safety flows \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 The EEG layers correspond to standard clinical frequency bands~\cite{berry2017,oppenheim1997}. Gamma power was computed with awareness of potential electromyographic (EMG) contamination artifacts at frequencies above 30~Hz~\cite{muthukumaraswamy2013}; however, the framework's reliance on relative coupling rather than absolute power mitigates this concern. Space weather layers span the sun--magnetosphere coupling chain from solar surface (F10.7) through interplanetary medium (solar wind dynamic pressure) to magnetospheric response (Dst, Kp, AE), using NASA OMNI2 data~\cite{papitashvili2020}. Financial layers span from individual equity stress through sector-level coherence to market-wide measures of volatility and risk appetite~\cite{forbes2002}. \textbf{$L_4$ (flight-to-safety)} is the mean $z$-score of safe-haven assets (Treasury bonds, gold, US dollar), following the same $z$-score protocol used for all other layers across all domains. An earlier formulation used a conjunction gate conditioning haven activation on concurrent equity stress; ablation testing (Section~\ref{sec:l4ablation}) demonstrated that this additional logic did not improve classification performance (AUC 0.870 without $L_4$ vs.\ 0.868 with the conjunction gate), so the simpler formulation is used here to maintain consistency with the zero-tuning design.
 
@@ -205,7 +205,7 @@ The second prediction is that events should exit the balance zone faster than no
 
 The residence time results are reported at multiple thresholds in Table~\ref{tab:residence}; distributions are shown in Fig.~\ref{fig:residence}.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:residence}Balance zone residence time (median days) by domain and threshold.}
 \begin{ruledtabular}
 \begin{tabular}{lllll}
@@ -215,7 +215,7 @@ Financial & KDE & 2 & 1 & 0.0003 \\
 Space & $\pm 1.5\sigma$ & 3 & 2 & 0.01 \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 \begin{figure*}[t]
 \centering
@@ -293,7 +293,7 @@ The analysis was scaled to 50 subjects (57,212 epochs) to assess stability. Key 
 
 \textbf{Exit velocity ratio.} 4.9$\times$ (up from 4.2$\times$ at 5 subjects), confirming the signal across a larger population.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:eeg}EEG results summary across sample sizes.}
 \begin{ruledtabular}
 \begin{tabular}{llll}
@@ -304,7 +304,7 @@ Balance zone ratio ($\pm 0.5\sigma$) & 18.9$\times$ & undef.\ (N3 = 0\%) & \text
 Exit velocity ratio & 4.2$\times$ & 5.6$\times$ & \textbf{4.9$\times$} \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 The distribution of $I$ ($R \times S$) for Wake vs.\ N3 is shown in Fig.~\ref{fig:eeg_stages}, illustrating the anti-prediction of Sum and the clean separation achieved by the coupling metric.
 
@@ -344,7 +344,7 @@ To validate the simplified $L_4$ formulation (Section~2.1), three variants were 
 
 To contextualize the $I$--$D$ variance early warning signal within the existing critical transitions literature, standard critical-slowing-down (CSD) indicators---rolling variance, AR(1) coefficient, and skewness~\cite{dakos2012}---were computed on raw domain signals (VIX for financial, Dst for space weather) and compared against $I$--$D$ balance variance as event classifiers.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:ews}Early warning indicator comparison (30-day window, AUC for event classification).}
 \begin{ruledtabular}
 \begin{tabular}{lll}
@@ -355,7 +355,7 @@ AR(1) coefficient & 0.606 & 0.443 \\
 Skewness & 0.582 & 0.727 \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 Standard rolling variance slightly outperforms $I$--$D$ variance in financial markets (0.826 vs.\ 0.780) and performs comparably in space weather (0.794 vs.\ 0.789). However, the two indicators capture complementary information: at a 5-day lead, standard variance shows a 2.9$\times$ pre-event elevation in financial data while $I$--$D$ variance shows 2.0$\times$, but at longer leads (30 days), the two converge (1.4$\times$ vs.\ 1.4$\times$). AR(1) and skewness perform substantially worse as standalone classifiers. The $I$--$D$ framework's contribution is not that it outperforms raw variance on a single signal, but that it provides a multi-scale coordinate system in which the variance signal is interpretable across domains and substrates---including EEG, where raw variance of a single signal cannot substitute for the structural $I$--$D$ decomposition.
 
@@ -379,7 +379,7 @@ Entropy coupling does not, however, invalidate the empirical contributions. Diff
 
 To address the concern that all results may reflect in-sample overfitting, a strict temporal split was applied to the financial and space weather domains. For financial markets, the first 3,964 days (pre-2015) served as the training set and the remaining 2,821 days (2015--2024) as the held-out test set. For space weather, the split was at 2010. All $z$-score normalization parameters (means, standard deviations) were learned exclusively from the training set and applied unchanged to the test set.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:oos}Out-of-sample validation: AUC on held-out test set ($z$-score parameters from training set only).}
 \begin{ruledtabular}
 \begin{tabular}{lllll}
@@ -394,7 +394,7 @@ Space ($R \times S$) & $|I{-}D|$ & 0.568 & 0.656 & $+$0.088 \\
 Space (Sum) & $|I{-}D|$ & 0.791 & 0.838 & $+$0.047 \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 All metrics retain discriminative power on the held-out period, with exit velocity AUC dropping by at most 0.09 (space Sum) and $|I{-}D|$ AUC actually \emph{improving} on the test set in all four cases. The improvement on $|I{-}D|$ likely reflects that the post-split periods include higher-volatility regimes (2020 COVID crash, 2015--2016 market turbulence) where the balance metric separates events more cleanly. These results confirm that the DET framework does not overfit to the training period and generalizes to unseen data without recalibration.
 
@@ -402,7 +402,7 @@ All metrics retain discriminative power on the held-out period, with exit veloci
 
 To assess whether the DET framework depends critically on the five-layer architecture, we systematically varied the number of layers $N \in \{3, 4, 5, 6, 8\}$ across all three domains. For $N < 5$, adjacent layers were merged by averaging their $z$-scored activations. For $N > 5$, existing layers were split into finer components from the same raw data: delta sub-bands in EEG, solar wind velocity separation in space weather, and VIX momentum or haven disaggregation in financial markets. All downstream computations ($R$, $S$, $D$, $I$, balance zone definitions) used identical formulas with only $N$ adjusted.
 
-\begin{table*}[h]
+\begin{table}[!htbp]
 \caption{\label{tab:layers_sensitivity}Layer sensitivity: $I$ ($R \times S$) AUC for event/state discrimination across layer counts. EEG values from the five-subject pilot; the 50-subject scale-up yields AUC 0.909 at $N=5$ (Table~IV).}
 \begin{ruledtabular}
 \begin{tabular}{lllll}
@@ -414,7 +414,7 @@ $N$ & Financial & Space & EEG (Wake vs.\ N3) & EEG Sum \\
 8 & 0.706 & 0.844 & \textbf{0.921} & 0.287 \\
 \end{tabular}
 \end{ruledtabular}
-\end{table*}
+\end{table}
 
 Three findings emerge (Fig.~\ref{fig:layer_sensitivity}). First, the framework is robust to layer count: adjacent values ($N = 4$ and $N = 6$) produce AUC within 10\% of the $N = 5$ baseline across all domains, with space weather and EEG actually improving at $N = 6$. Second, performance degrades smoothly at $N = 3$ (insufficient hierarchical depth for meaningful integration), consistent with the theoretical requirement that integration needs multiple engaged layers. Notably, $N = 3$ produces the highest balance zone ratio in EEG (46$\times$) yet the worst AUC (0.669): with only three layers, the balance zone becomes so narrow that nearly all N3 epochs are excluded, inflating the ratio while providing insufficient resolution for robust classification. Third, $N = 8$ offers no improvement over $N = 6$, suggesting diminishing returns from over-decomposition.
 
