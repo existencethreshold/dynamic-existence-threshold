@@ -91,16 +91,16 @@ def fig1_quadrant_model():
     fig, ax = plt.subplots(figsize=(6, 6))
     
     # Quadrant labels
-    ax.text(0.75, 0.75, 'CRITICAL\nBALANCE\n(Consciousness,\nHealthy Function)',
+    ax.text(0.75, 0.75, 'ORGANIZED\nCOMPLEXITY\n(Coordinated,\nDifferentiated Activity)',
             ha='center', va='center', fontsize=11, fontweight='bold',
             bbox=dict(boxstyle='round,pad=0.3', facecolor='#4CAF50', alpha=0.3))
-    ax.text(0.75, 0.25, 'CASCADE\n(Seizure, Crash,\nPathological Sync)',
+    ax.text(0.75, 0.25, 'CASCADE\n(Pathological\nSynchronization)',
             ha='center', va='center', fontsize=11, fontweight='bold',
             bbox=dict(boxstyle='round,pad=0.3', facecolor='#F44336', alpha=0.3))
-    ax.text(0.25, 0.75, 'NORMAL IDLE\n(Quiet, Healthy,\nFragmented)',
+    ax.text(0.25, 0.75, 'DORMANT/\nFRAGMENTED\n(Single Component\nDominates)',
             ha='center', va='center', fontsize=11, fontweight='bold',
             bbox=dict(boxstyle='round,pad=0.3', facecolor='#2196F3', alpha=0.3))
-    ax.text(0.25, 0.25, 'DEATH / OFF\n(System Down,\nNo Activity)',
+    ax.text(0.25, 0.25, 'DEATH / OFF\n(System\nInactive)',
             ha='center', va='center', fontsize=11, fontweight='bold',
             bbox=dict(boxstyle='round,pad=0.3', facecolor='#9E9E9E', alpha=0.3))
     
@@ -117,7 +117,7 @@ def fig1_quadrant_model():
     # Arrow: cascade exit
     ax.annotate('', xy=(0.85, 0.2), xytext=(0.6, 0.6),
                 arrowprops=dict(arrowstyle='->', color='red', lw=2))
-    ax.text(0.78, 0.42, 'Event\nExit', fontsize=9, color='red', ha='center')
+    ax.text(0.80, 0.45, 'Event\nExit', fontsize=10, color='red', ha='center', fontweight='bold')
     
     ax.set_xlabel('Integration (I = R × S)', fontsize=13)
     ax.set_ylabel('Differentiation (D)', fontsize=13)

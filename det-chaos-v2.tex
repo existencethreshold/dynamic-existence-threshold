@@ -1,4 +1,4 @@
-\documentclass[aip,cha,preprint,amsmath,amssymb,final,tightenlines]{revtex4-2}
+\documentclass[aip,cha,reprint,amsmath,amssymb,final]{revtex4-2}
 \usepackage{graphicx}
 \graphicspath{{figures/}{./}}
 \usepackage{booktabs}
@@ -32,28 +32,28 @@ The present work synthesizes these threads. IIT's $\Phi$ remains intractable for
 
 The central hypothesis is straightforward. Integration ($I$) measures the degree of coordinated coupling among system components. Differentiation ($D$) measures the degree to which the system's activity profile diverges from uniformity. These two quantities define a phase space with four canonical states (Fig.~\ref{fig:quadrant}):
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{Four-state model of the $I$--$D$ phase space.}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{llll}
 State & $I$ & $D$ & Interpretation \\
-\hline
 Dormant/fragmented & Low & High & Single component dominates; others suppressed \\
 Organized complexity & High & High & Coordinated, differentiated activity \\
 Cascade/seizure/crash & High & Low & Pathological synchronization \\
 Death/off & Low & Low & System inactive \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 The four states represent a theoretical taxonomy of the $I$--$D$ plane. Because the chosen proxy metrics are entropy-coupled (Section~3.6.4), empirical observations are largely constrained to the CASCADE--RECOVERY axis (high-$I$/low-$D$ to low-$I$/high-$D$). The Organized complexity and Death/off quadrants would require entropy-decoupled metrics---such as network-topology measures or formal partial information decomposition---to access reliably. The taxonomy remains useful as a conceptual map even when the accessible region is a subset of the full plane.
 
 \emph{Note:} Empirically, healthy baseline function (wakefulness, normal markets) corresponds to moderate values of both $I$ and $D$---the center of the entropy axis---not to any single quadrant corner. The Dormant/fragmented and Cascade quadrants represent the two extremes of this axis, with healthy function between them.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig1_quadrant_model.png}
+\includegraphics[width=\textwidth]{fig1_quadrant_model.png}
 \caption{\label{fig:quadrant}Schematic of the $I$--$D$ phase space showing the four theoretical states (Table~I) and the entropy-coupled axis along which empirical observations are constrained. Healthy baseline function occupies the center of this axis; critical events correspond to departures toward the CASCADE or DORMANT extremes.}
-\end{figure}
+\end{figure*}
 
 The Dynamic Existence Threshold (DET) is the boundary of the balance zone in $I$--$D$ space. Systems persist within this zone; critical events correspond to exits from it. We use ``existence'' in the information-theoretic sense: a system \emph{exists as an organized entity} when its integrated information is positive. When $I$--$D$ balance breaks, the system persists physically but its organizational identity---the coordinated structure that distinguishes it from its components---degrades. A market in cascade is still a market in name; it is not functioning as one. A brain in deep sleep still generates electrical activity; it has lost the cross-frequency coordination that characterizes conscious processing. The threshold is not physical death but organizational dissolution---the loss of what we term \emph{multi-scale coordination}, the property of a complex system whose components are simultaneously integrated and differentiated. Crucially, the approach to this boundary should produce early warning signals---rising variance in the balance metric---consistent with the critical slowing down framework~\cite{scheffer2009}.
 
@@ -66,19 +66,19 @@ This paper tests five predictions derived from the DET hypothesis across three d
 
 To enable cross-domain comparison without parameter tuning, each domain is decomposed into five measurement layers representing distinct scales or modalities of system activity. The five-layer decomposition follows a principle of hierarchical coverage: layers span from the most local or fundamental process ($L_0$) to the most global or emergent indicator ($L_4$). Table~\ref{tab:layers} specifies the mapping.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:layers}Five-layer architecture across domains.}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{llll}
 Layer & EEG Sleep & Space Weather & Financial Markets \\
-\hline
 $L_0$ & Delta (0.5--4 Hz) & F10.7 solar flux & Stock market stress \\
 $L_1$ & Theta (4--8 Hz) & Solar wind pressure & Sector coherence \\
 $L_2$ & Alpha (8--13 Hz) & Disturbance Storm Time (Dst) index & Cross-sector correlation \\
 $L_3$ & Beta (13--30 Hz) & Planetary K-index (Kp) & VIX implied volatility \\
 $L_4$ & Gamma (30--45 Hz) & Auroral Electrojet (AE) index & Flight-to-safety flows \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 The EEG layers correspond to standard clinical frequency bands~\cite{berry2017,oppenheim1997}. Gamma power was computed with awareness of potential electromyographic (EMG) contamination artifacts at frequencies above 30~Hz~\cite{muthukumaraswamy2013}; however, the framework's reliance on relative coupling rather than absolute power mitigates this concern. Space weather layers span the sun--magnetosphere coupling chain from solar surface (F10.7) through interplanetary medium (solar wind dynamic pressure) to magnetospheric response (Dst, Kp, AE), using NASA OMNI2 data~\cite{papitashvili2020}. Financial layers span from individual equity stress through sector-level coherence to market-wide measures of volatility and risk appetite~\cite{forbes2002}. \textbf{$L_4$ (flight-to-safety)} is the mean $z$-score of safe-haven assets (Treasury bonds, gold, US dollar), following the same $z$-score protocol used for all other layers across all domains. An earlier formulation used a conjunction gate conditioning haven activation on concurrent equity stress; ablation testing (Section~\ref{sec:l4ablation}) demonstrated that this additional logic did not improve classification performance (AUC 0.870 without $L_4$ vs.\ 0.868 with the conjunction gate), so the simpler formulation is used here to maintain consistency with the zero-tuning design.
 
@@ -205,23 +205,23 @@ The second prediction is that events should exit the balance zone faster than no
 
 The residence time results are reported at multiple thresholds in Table~\ref{tab:residence}; distributions are shown in Fig.~\ref{fig:residence}.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:residence}Balance zone residence time (median days) by domain and threshold.}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{lllll}
 Domain & Threshold & Normal & Event & $p$-value \\
-\hline
 Financial & $\pm 1.5\sigma$ & 2 & 1 & 0.0001 \\
 Financial & KDE & 2 & 1 & 0.0003 \\
 Space & $\pm 1.5\sigma$ & 3 & 2 & 0.01 \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig5_residence.png}
+\includegraphics[width=\textwidth]{fig5_residence.png}
 \caption{\label{fig:residence}Balance zone residence time distributions for event vs.\ normal periods. Events exit the balance zone faster than normal state changes, with median residence times halved during event periods in financial markets ($p = 0.0001$).}
-\end{figure}
+\end{figure*}
 
 The discrimination improves at wider thresholds, consistent with the interpretation that larger balance zones capture more of the normal-state dynamics while still showing rapid event-period exits.
 
@@ -235,11 +235,11 @@ The third and most practically significant prediction is that rising variance of
 
 The convergence of the 2.0$\times$ elevation ratio across two physically unrelated domains at the 5-day horizon---without any parameter tuning---is notable (Fig.~\ref{fig:early_warning}). The $I$--$D$ balance metric appears to provide a common coordinate system in which the approach to critical transitions manifests with quantitatively similar early warning signatures.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig2_early_warning.png}
+\includegraphics[width=\textwidth]{fig2_early_warning.png}
 \caption{\label{fig:early_warning}Rolling variance of the balance metric $B = |z(I) - z(D)|$ showing pre-event elevation. The 30-day rolling variance rises to 2.0$\times$ its normal-period level at a 5-day lead before events in both financial and space weather domains, consistent with critical slowing down.}
-\end{figure}
+\end{figure*}
 
 \subsection{Test 4: Classifier Performance, Exit Velocity, and Cross-Domain Transfer}
 
@@ -251,11 +251,11 @@ The convergence of the 2.0$\times$ elevation ratio across two physically unrelat
 
 A comparison of classifier performance across metrics and domains is shown in Fig.~\ref{fig:classifier}.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig3_classifier_comparison.png}
+\includegraphics[width=\textwidth]{fig3_classifier_comparison.png}
 \caption{\label{fig:classifier}Classifier comparison across metrics (Sum, $R \times S$, exit velocity) and domains (financial markets, space weather). Sum provides a strong baseline in time-series domains but anti-predicts in EEG, while exit velocity and $R \times S$ capture structural organization.}
-\end{figure}
+\end{figure*}
 
 \textbf{Cross-domain transfer.} To test whether the framework captures domain-general structure, classification thresholds learned in one domain were applied to the other without recalibration. The Sum-based threshold ratio between domains is 1.47$\times$, and financial-to-space transfer achieves a true positive rate (TPR) of 0.78---reasonable cross-domain performance for a zero-tuning framework. The $R \times S$ threshold ratio is larger (3.77$\times$), reflecting the greater domain-specificity of coupling structure compared to total magnitude. For cross-domain transfer, Sum provides a more stable $I$ coordinate than $R \times S$.
 
@@ -293,26 +293,26 @@ The analysis was scaled to 50 subjects (57,212 epochs) to assess stability. Key 
 
 \textbf{Exit velocity ratio.} 4.9$\times$ (up from 4.2$\times$ at 5 subjects), confirming the signal across a larger population.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:eeg}EEG results summary across sample sizes.}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{llll}
 Metric & 5 Subj. & 30 Subj. & 50 Subj. \\
-\hline
 $I$ ($R \times S$) AUC & 0.869 & 0.904 & \textbf{0.909} [0.904, 0.913] \\
 Sum AUC & 0.288 & 0.330 & \textbf{0.416} (anti-predicts) \\
 Balance zone ratio ($\pm 0.5\sigma$) & 18.9$\times$ & undef.\ (N3 = 0\%) & \textbf{36.6$\times$} \\
 Exit velocity ratio & 4.2$\times$ & 5.6$\times$ & \textbf{4.9$\times$} \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 The distribution of $I$ ($R \times S$) for Wake vs.\ N3 is shown in Fig.~\ref{fig:eeg_stages}, illustrating the anti-prediction of Sum and the clean separation achieved by the coupling metric.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig4_eeg_stages.png}
+\includegraphics[width=\textwidth]{fig4_eeg_stages.png}
 \caption{\label{fig:eeg_stages}Distribution of $I$ ($R \times S$) for Wake vs.\ N3 deep sleep across 50 subjects (57,212 epochs). The coupling metric cleanly separates states (AUC 0.909), while Sum anti-predicts (AUC 0.416) because N3 has higher total spectral power than wakefulness.}
-\end{figure}
+\end{figure*}
 
 \subsection{\label{sec:robustness}Robustness Across Thresholds}
 
@@ -344,18 +344,18 @@ To validate the simplified $L_4$ formulation (Section~2.1), three variants were 
 
 To contextualize the $I$--$D$ variance early warning signal within the existing critical transitions literature, standard critical-slowing-down (CSD) indicators---rolling variance, AR(1) coefficient, and skewness~\cite{dakos2012}---were computed on raw domain signals (VIX for financial, Dst for space weather) and compared against $I$--$D$ balance variance as event classifiers.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:ews}Early warning indicator comparison (30-day window, AUC for event classification).}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{lll}
 Indicator & Financial & Space Weather \\
-\hline
 $I$--$D$ balance variance & 0.780 & 0.789 \\
 Standard rolling variance & 0.826 & 0.794 \\
 AR(1) coefficient & 0.606 & 0.443 \\
 Skewness & 0.582 & 0.727 \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 Standard rolling variance slightly outperforms $I$--$D$ variance in financial markets (0.826 vs.\ 0.780) and performs comparably in space weather (0.794 vs.\ 0.789). However, the two indicators capture complementary information: at a 5-day lead, standard variance shows a 2.9$\times$ pre-event elevation in financial data while $I$--$D$ variance shows 2.0$\times$, but at longer leads (30 days), the two converge (1.4$\times$ vs.\ 1.4$\times$). AR(1) and skewness perform substantially worse as standalone classifiers. The $I$--$D$ framework's contribution is not that it outperforms raw variance on a single signal, but that it provides a multi-scale coordinate system in which the variance signal is interpretable across domains and substrates---including EEG, where raw variance of a single signal cannot substitute for the structural $I$--$D$ decomposition.
 
@@ -379,12 +379,11 @@ Entropy coupling does not, however, invalidate the empirical contributions. Diff
 
 To address the concern that all results may reflect in-sample overfitting, a strict temporal split was applied to the financial and space weather domains. For financial markets, the first 3,964 days (pre-2015) served as the training set and the remaining 2,821 days (2015--2024) as the held-out test set. For space weather, the split was at 2010. All $z$-score normalization parameters (means, standard deviations) were learned exclusively from the training set and applied unchanged to the test set.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:oos}Out-of-sample validation: AUC on held-out test set ($z$-score parameters from training set only).}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{lllll}
 Domain & Metric & Train AUC & Test AUC & $\Delta$ \\
-\hline
 Financial ($R \times S$) & Exit vel. & 0.665 & 0.634 & $-$0.031 \\
 Financial (Sum) & Exit vel. & 0.681 & 0.712 & $+$0.032 \\
 Space ($R \times S$) & Exit vel. & 0.716 & 0.686 & $-$0.030 \\
@@ -394,7 +393,8 @@ Financial (Sum) & $|I{-}D|$ & 0.681 & 0.792 & $+$0.111 \\
 Space ($R \times S$) & $|I{-}D|$ & 0.568 & 0.656 & $+$0.088 \\
 Space (Sum) & $|I{-}D|$ & 0.791 & 0.838 & $+$0.047 \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 All metrics retain discriminative power on the held-out period, with exit velocity AUC dropping by at most 0.09 (space Sum) and $|I{-}D|$ AUC actually \emph{improving} on the test set in all four cases. The improvement on $|I{-}D|$ likely reflects that the post-split periods include higher-volatility regimes (2020 COVID crash, 2015--2016 market turbulence) where the balance metric separates events more cleanly. These results confirm that the DET framework does not overfit to the training period and generalizes to unseen data without recalibration.
 
@@ -402,19 +402,19 @@ All metrics retain discriminative power on the held-out period, with exit veloci
 
 To assess whether the DET framework depends critically on the five-layer architecture, we systematically varied the number of layers $N \in \{3, 4, 5, 6, 8\}$ across all three domains. For $N < 5$, adjacent layers were merged by averaging their $z$-scored activations. For $N > 5$, existing layers were split into finer components from the same raw data: delta sub-bands in EEG, solar wind velocity separation in space weather, and VIX momentum or haven disaggregation in financial markets. All downstream computations ($R$, $S$, $D$, $I$, balance zone definitions) used identical formulas with only $N$ adjusted.
 
-\begin{table}[h]
+\begin{table*}[h]
 \caption{\label{tab:layers_sensitivity}Layer sensitivity: $I$ ($R \times S$) AUC for event/state discrimination across layer counts.}
-\centering
+\begin{ruledtabular}
 \begin{tabular}{lllll}
 $N$ & Financial & Space & EEG (Wake vs.\ N3) & EEG Sum \\
-\hline
 3 & 0.590 & 0.604 & 0.669 & 0.290 \\
 4 & 0.695 & 0.746 & 0.858 & 0.289 \\
 5 (std.) & 0.769 & 0.835 & 0.869 & 0.288 \\
 6 & 0.725 & 0.858 & \textbf{0.924} & 0.287 \\
 8 & 0.706 & 0.844 & \textbf{0.921} & 0.287 \\
 \end{tabular}
-\end{table}
+\end{ruledtabular}
+\end{table*}
 
 Three findings emerge (Fig.~\ref{fig:layer_sensitivity}). First, the framework is robust to layer count: adjacent values ($N = 4$ and $N = 6$) produce AUC within 10\% of the $N = 5$ baseline across all domains, with space weather and EEG actually improving at $N = 6$. Second, performance degrades smoothly at $N = 3$ (insufficient hierarchical depth for meaningful integration), consistent with the theoretical requirement that integration needs multiple engaged layers. Notably, $N = 3$ produces the highest balance zone ratio in EEG (46$\times$) yet the worst AUC (0.669): with only three layers, the balance zone becomes so narrow that nearly all N3 epochs are excluded, inflating the ratio while providing insufficient resolution for robust classification. Third, $N = 8$ offers no improvement over $N = 6$, suggesting diminishing returns from over-decomposition.
 
@@ -422,11 +422,11 @@ Critically, the Sum metric continues to anti-predict in EEG at all layer counts 
 
 The layer sensitivity results are shown in Fig.~\ref{fig:layer_sensitivity}.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig6_layer_sensitivity.png}
+\includegraphics[width=\textwidth]{fig6_layer_sensitivity.png}
 \caption{\label{fig:layer_sensitivity}AUC stability across layer counts $N = 3$ to $N = 8$ for all three domains. The framework is robust to layer count, with performance degrading smoothly only at $N = 3$ (insufficient hierarchical depth). Sum continues to anti-predict in EEG at all layer counts.}
-\end{figure}
+\end{figure*}
 
 The EEG result at $N = 6$ (AUC 0.924) suggests that splitting delta into slow and fast sub-bands captures additional structure relevant to coherence-state discrimination, consistent with the known physiological distinction between delta-1 (0.5--2~Hz) and delta-2 (2--4~Hz) oscillations~\cite{amzica1998}. However, we retain the five-layer architecture as the standard to maintain the zero-tuning claim---selecting $N = 6$ specifically for EEG would constitute domain-specific optimization.
 
