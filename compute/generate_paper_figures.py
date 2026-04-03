@@ -114,10 +114,11 @@ def fig1_quadrant_model():
                      label='I-D Balance Zone')
     ax.plot(x, x, '--', color='goldenrod', linewidth=1.5, alpha=0.7)
     
-    # Arrow: cascade exit (shifted right to avoid overlapping CASCADE label)
-    ax.annotate('', xy=(0.92, 0.15), xytext=(0.65, 0.6),
-                arrowprops=dict(arrowstyle='->', color='red', lw=2))
-    ax.text(0.88, 0.42, 'Event\nExit', fontsize=10, color='red', ha='center', fontweight='bold')
+    # Arrow: cascade exit (routed right of CASCADE label box)
+    ax.annotate('', xy=(0.95, 0.12), xytext=(0.55, 0.62),
+                arrowprops=dict(arrowstyle='->', color='red', lw=2.5,
+                                connectionstyle='arc3,rad=-0.2'))
+    ax.text(0.52, 0.56, 'Event\nExit', fontsize=10, color='red', ha='center', fontweight='bold')
     
     ax.set_xlabel('Integration (I = R × S)', fontsize=13)
     ax.set_ylabel('Differentiation (D)', fontsize=13)
