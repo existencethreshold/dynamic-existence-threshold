@@ -8,7 +8,7 @@ Nathan M. Thornhill — Independent Researcher, Fort Wayne, Indiana, USA
 
 Analysis code, precomputed results, and publication figures for the Dynamic Existence Threshold (DET) framework. The DET introduces a two-dimensional coordinate system (Integration × Differentiation) that characterizes critical transitions across financial markets, space weather, and human EEG without parameter tuning between domains.
 
-**Key result:** The coupling metric I = R×S achieves AUC 0.909 for discriminating wakefulness from deep sleep in 50-subject EEG, while simple summation of spectral power *anti-predicts* (AUC 0.416) — confirming the framework captures organizational structure rather than magnitude. Out-of-sample temporal validation confirms no overfitting (all metrics hold on held-out test periods).
+**Key result:** The coupling metric I = R×S achieves AUC 0.909 for discriminating wakefulness from deep sleep in 50-subject EEG, while simple summation of spectral power *anti-predicts* (AUC 0.416) — confirming the framework captures organizational structure rather than magnitude. Out-of-sample temporal validation confirms no overfitting (all metrics hold on held-out test periods). Component analysis reveals that total organizational information (Phi = I + D) is approximately conserved during critical transitions (within 1-14% across all domains), while components undergo inverse exchange — integration surges while differentiation drops in cascades, and the reverse during consciousness transitions.
 
 ## Repository Structure
 
@@ -28,6 +28,7 @@ Analysis code, precomputed results, and publication figures for the Dynamic Exis
 │   ├── layer_sensitivity_eeg.py            #   Layer count sensitivity (EEG)
 │   ├── bootstrap_and_sweep.py              #   Bootstrap confidence intervals
 │   ├── id_categories_test.py               #   I-D directional dynamics
+│   ├── phi_conservation_test.py            #   Phi conservation analysis (Test 6)
 │   ├── generate_paper_figures.py           #   Publication figures (300 DPI)
 │   └── layer_sensitivity_combined_plot.py  #   Figure 6
 ├── results/                                # Precomputed results (JSON)
@@ -41,7 +42,8 @@ Analysis code, precomputed results, and publication figures for the Dynamic Exis
 │   ├── layer_sensitivity_finspace.json     #   Layer sensitivity (financial + space)
 │   ├── layer_sensitivity_eeg.json          #   Layer sensitivity (EEG)
 │   ├── bootstrap_results.json              #   Bootstrap CIs
-│   └── id_categories_results.json          #   Directional dynamics
+│   ├── id_categories_results.json          #   Directional dynamics
+│   └── phi_conservation_results.json       #   Phi conservation (Test 6)
 └── figures/                                # Publication figures (300 DPI)
     ├── fig1_quadrant_model.png
     ├── fig2_early_warning.png
@@ -57,7 +59,7 @@ Analysis code, precomputed results, and publication figures for the Dynamic Exis
 |--------|---------|--------|
 | Financial markets | 6,785 trading days | [yfinance](https://pypi.org/project/yfinance/) |
 | Space weather | 9,802 days | [NASA OMNI2](https://omniweb.gsfc.nasa.gov/) |
-| EEG | 50 subjects, 57,212 epochs | [Sleep-EDF, PhysioNet](https://physionet.org/content/sleep-edfx/) |
+| EEG | 50 subjects, 136,394 epochs | [Sleep-EDF, PhysioNet](https://physionet.org/content/sleep-edfx/) |
 
 ## Setup
 
@@ -104,6 +106,9 @@ python compute/delta_beta_headtohead.py
 # Layer sensitivity
 python compute/layer_sensitivity_finspace.py
 python compute/layer_sensitivity_eeg.py
+
+# Phi conservation analysis (Test 6, requires ~8GB RAM)
+python compute/phi_conservation_test.py
 
 # Figures
 python compute/generate_paper_figures.py
