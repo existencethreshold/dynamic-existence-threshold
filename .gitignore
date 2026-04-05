@@ -56,3 +56,14 @@ figP*
 det-arxiv.tex
 panel-review/
 paper5-bridge-test/
+
+# Non-prefixed patent figures (confidential)
+figures/fig1_layer_decomposition.png
+figures/fig2_block_diagram.png
+figures/fig3_rxs_contour.png
+figures/fig4_early_warning_flow.png
+figures/fig5_eeg_classifier_flow.png
+figures/fig6_health_monitor_arch.png
+figures/fig7_hardware_arch.png
+figures/fig8_worked_example.png
+figures/fig9_alert_visualization.png

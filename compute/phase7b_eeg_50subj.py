@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Phase 7b EEG 50-Subject: Full 50-subject I-D Balance Analysis
+Phase 7b EEG: Full I-D Balance Analysis (50+ subjects)
 Self-contained — downloads data, runs all tests, prints results.
 Requires: pip install -r requirements.txt (see README)
 """

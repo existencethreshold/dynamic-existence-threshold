@@ -120,10 +120,10 @@ plt.tight_layout(pad=2.0)
 outplot = os.path.join(outdir, 'figures', 'fig6_layer_sensitivity.png')
 os.makedirs(os.path.join(outdir, 'figures'), exist_ok=True)
 plt.savefig(outplot, dpi=300, bbox_inches='tight')
-plt.close()
-print(f"Saved: {outplot}")
 
 # Also save a lower-res version
 outplot2 = os.path.join(outdir, 'layer_sensitivity_combined.png')
 fig.savefig(outplot2, dpi=150, bbox_inches='tight')
+plt.close()
+print(f"Saved: {outplot}")
 print(f"Saved: {outplot2}")

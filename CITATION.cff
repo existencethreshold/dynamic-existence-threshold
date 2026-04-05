@@ -7,7 +7,7 @@ authors:
     given-names: Nathan M.
     orcid: "https://orcid.org/0009-0009-3161-528X"
 version: "1.0.0"
-date-released: "2026-03-27"
+date-released: "2026-04-05"
 url: "https://github.com/existencethreshold/dynamic-existence-threshold"
 preferred-citation:
   type: article
