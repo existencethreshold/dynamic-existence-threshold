@@ -1,4 +1,4 @@
-# Backups
+# Backups & drafts
 *.bak
 *.draft.md
 det-chaos-*-backup.tex
@@ -17,7 +17,7 @@ Thumbs.db
 *.key
 *.token
 
-# Data too large for git (download from PhysioNet)
+# Large data files (download from PhysioNet)
 *.edf
 *.rec
 
@@ -25,47 +25,41 @@ Thumbs.db
 *.pdf
 *.log
 *.ipynb
-
-# Intermediate plots (publication figures are in figures/)
-results/*.png
-
-# Internal working files
-archive/
-.claude/
-provisional-patent-draft.md
-
-# LaTeX build artifacts
 *.aux
 *.out
 *.bbl
 *.blg
 *Notes.bib
 *.synctex.gz
+*.toc
 
-# Patent files (confidential)
+# Intermediate plots (publication figures are in figures/)
+results/*.png
+
+# Local working directories
+archive/
+.*config*/
+.*/
+
+# Local working files
+provisional-patent*.md
 provisional-patent*.tex
 provisional-patent*.pdf
-provisional-patent*.toc
-provisional-patent*.out
-provisional-patent*.aux
-provisional-patent*.log
-patent-review-results*.md
+patent-filing/
+patent-*results*.md
+det-arxiv.tex
+paper5-bridge-test/
+*-review*/
 figP*
 
-# Working copies
-det-arxiv.tex
-panel-review/
-paper5-bridge-test/
-
-# Non-prefixed patent figures (confidential)
-figures/fig1_layer_decomposition.png
-figures/fig2_block_diagram.png
-figures/fig3_rxs_contour.png
-figures/fig4_early_warning_flow.png
-figures/fig5_eeg_classifier_flow.png
-figures/fig6_health_monitor_arch.png
-figures/fig7_hardware_arch.png
-figures/fig8_worked_example.png
-figures/fig9_alert_visualization.png
-panel-review-v3/
-panel-review-v3-final/
+# Unused figures
+figures/fig[0-9]*_layer_decomposition.png
+figures/fig[0-9]*_block_diagram.png
+figures/fig[0-9]*_rxs_contour.png
+figures/fig[0-9]*_rxs_surface.png
+figures/fig[0-9]*_early_warning_flow.png
+figures/fig[0-9]*_eeg_classifier_flow.png
+figures/fig[0-9]*_health_monitor_arch.png
+figures/fig[0-9]*_hardware_arch.png
+figures/fig[0-9]*_worked_example.png
+figures/fig[0-9]*_alert_visualization.png
