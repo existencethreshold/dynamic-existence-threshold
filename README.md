@@ -13,7 +13,7 @@ Analysis code, precomputed results, and publication figures for the Dynamic Exis
 ## Repository Structure
 
 ```
-├── det-chaos.md          # Paper (Markdown, source of truth)
+├── det-chaos.md          # Paper (Markdown)
 ├── det-chaos.tex         # Paper (LaTeX, for journal submission)
 ├── compute/                                # Analysis pipelines
 │   ├── phase7b_tests.py                    #   Financial + space weather (Tests 1-4)
