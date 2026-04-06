@@ -13,8 +13,7 @@ Analysis code, precomputed results, and publication figures for the Dynamic Exis
 ## Repository Structure
 
 ```
-├── det-chaos.md          # Paper (Markdown)
-├── det-chaos.tex         # Paper (LaTeX, for journal submission)
+├── Thornhill_2026_Dynamic_Existence_Threshold.pdf  # Paper (Zenodo)
 ├── compute/                                # Analysis pipelines
 │   ├── phase7b_tests.py                    #   Financial + space weather (Tests 1-4)
 │   ├── phase7b_eeg_50subj.py               #   EEG 50-subject analysis (Test 5)
