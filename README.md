@@ -124,7 +124,10 @@ Precomputed results are in `results/` for verification without re-running.
 
 ## License
 
-This repository is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Reuse permitted with attribution — please cite the paper.
+This repository is dual-licensed:
+
+- **Paper text, figures, and supplementary write-ups** — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE-PAPER`). Reuse permitted with attribution — please cite the paper.
+- **Source code** — [MIT License](https://opensource.org/licenses/MIT) (see `LICENSE`). Free reuse, modification, and redistribution.
 
 ## Citation
 
